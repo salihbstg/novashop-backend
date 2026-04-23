@@ -5192,3 +5192,734 @@ This generated password is for development use only. Your security configuration
 2026-04-23T18:07:31.242+03:00  INFO 13028 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-23T18:07:31.243+03:00  INFO 13028 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-04-23T18:07:31.245+03:00  INFO 13028 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:07:34.763+03:00  INFO 18408 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 18408 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:07:34.765+03:00 DEBUG 18408 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:07:34.766+03:00  INFO 18408 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:07:35.215+03:00  INFO 18408 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:07:35.259+03:00  INFO 18408 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
+2026-04-23T18:07:35.599+03:00  INFO 18408 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:07:35.609+03:00  INFO 18408 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:07:35.610+03:00  INFO 18408 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:07:35.650+03:00  INFO 18408 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 852 ms
+2026-04-23T18:07:35.688+03:00 DEBUG 18408 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:07:35.788+03:00  INFO 18408 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:07:35.827+03:00  INFO 18408 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:07:36.153+03:00  INFO 18408 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:07:36.178+03:00  INFO 18408 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:07:36.297+03:00  INFO 18408 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:07:36.298+03:00  INFO 18408 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:07:36.345+03:00  INFO 18408 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:07:37.122+03:00  INFO 18408 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:07:37.167+03:00  INFO 18408 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:07:37.220+03:00  INFO 18408 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:07:37.384+03:00  WARN 18408 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:07:37.435+03:00  WARN 18408 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 74eeaac8-ba40-45bc-ac31-d1e353fc667d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:07:37.440+03:00  INFO 18408 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:07:37.524+03:00 DEBUG 18408 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:07:37.758+03:00  INFO 18408 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:07:37.761+03:00  INFO 18408 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.331 seconds (process running for 3.824)
+2026-04-23T18:07:42.109+03:00  INFO 18408 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:07:42.109+03:00  INFO 18408 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:07:42.109+03:00  INFO 18408 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:07:42.109+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-04-23T18:07:42.123+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-04-23T18:07:42.483+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:07:42.632+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-04-23T18:07:49.380+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/v1/users/me
+2026-04-23T18:07:49.406+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/v1/users/me
+2026-04-23T18:07:49.406+03:00 DEBUG 18408 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:24:55.615+03:00  INFO 18408 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:24:55.620+03:00  INFO 18408 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:24:55.624+03:00  INFO 18408 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:24:55.625+03:00  INFO 18408 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:24:55.628+03:00  INFO 18408 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:24:59.198+03:00  INFO 14376 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 14376 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:24:59.200+03:00 DEBUG 14376 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:24:59.200+03:00  INFO 14376 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:24:59.666+03:00  INFO 14376 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:24:59.711+03:00  INFO 14376 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-04-23T18:25:00.061+03:00  INFO 14376 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:25:00.069+03:00  INFO 14376 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:25:00.070+03:00  INFO 14376 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:25:00.116+03:00  INFO 14376 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 883 ms
+2026-04-23T18:25:00.153+03:00 DEBUG 14376 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:25:00.250+03:00  INFO 14376 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:25:00.289+03:00  INFO 14376 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:25:00.619+03:00  INFO 14376 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:25:00.640+03:00  INFO 14376 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:25:00.753+03:00  INFO 14376 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:25:00.755+03:00  INFO 14376 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:25:00.808+03:00  INFO 14376 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:25:01.563+03:00  INFO 14376 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:25:01.606+03:00  INFO 14376 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:25:01.658+03:00  INFO 14376 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:25:01.819+03:00  WARN 14376 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:25:01.874+03:00  WARN 14376 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 58ac192b-ce02-4522-aa5c-1a9b92b4b73f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:25:01.879+03:00  INFO 14376 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:25:01.963+03:00 DEBUG 14376 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:25:02.189+03:00  INFO 14376 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:25:02.193+03:00  INFO 14376 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.326 seconds (process running for 3.827)
+2026-04-23T18:25:19.080+03:00  INFO 14376 --- [novashop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:25:19.080+03:00  INFO 14376 --- [novashop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:25:19.080+03:00  INFO 14376 --- [novashop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:25:19.080+03:00 DEBUG 14376 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-04-23T18:25:19.093+03:00 DEBUG 14376 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-04-23T18:25:19.454+03:00 DEBUG 14376 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:25:19.587+03:00 DEBUG 14376 --- [novashop] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-04-23T18:26:35.565+03:00  INFO 14376 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:26:35.569+03:00  INFO 14376 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:26:35.573+03:00  INFO 14376 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:26:35.575+03:00  INFO 14376 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:26:35.576+03:00  INFO 14376 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:26:39.117+03:00  INFO 17824 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 17824 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:26:39.119+03:00 DEBUG 17824 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:26:39.119+03:00  INFO 17824 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:26:39.575+03:00  INFO 17824 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:26:39.628+03:00  INFO 17824 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interface.
+2026-04-23T18:26:39.985+03:00  INFO 17824 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:26:39.994+03:00  INFO 17824 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:26:39.994+03:00  INFO 17824 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:26:40.034+03:00  INFO 17824 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 883 ms
+2026-04-23T18:26:40.074+03:00 DEBUG 17824 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:26:40.171+03:00  INFO 17824 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:26:40.195+03:00  INFO 17824 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:26:40.567+03:00  INFO 17824 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:26:40.590+03:00  INFO 17824 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:26:40.716+03:00  INFO 17824 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:26:40.717+03:00  INFO 17824 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:26:40.767+03:00  INFO 17824 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:26:41.536+03:00  INFO 17824 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:26:41.582+03:00  INFO 17824 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:26:41.634+03:00  INFO 17824 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:26:41.799+03:00  WARN 17824 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:26:41.851+03:00  WARN 17824 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 84cb4070-67d6-4318-8de3-041740313dd5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:26:41.857+03:00  INFO 17824 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:26:41.939+03:00 DEBUG 17824 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:26:42.170+03:00  INFO 17824 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:26:42.174+03:00  INFO 17824 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.386 seconds (process running for 3.941)
+2026-04-23T18:26:45.120+03:00  INFO 17824 --- [novashop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:26:45.120+03:00  INFO 17824 --- [novashop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:26:45.120+03:00  INFO 17824 --- [novashop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:26:45.120+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-04-23T18:26:45.133+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-04-23T18:26:45.492+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:26:45.640+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-04-23T18:28:57.661+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:28:57.686+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:28:57.700+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:28:57.713+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:28:57.713+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:28:57.740+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:29:10.078+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:29:10.078+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:29:10.078+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:29:10.078+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:29:10.078+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:29:18.509+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:29:18.509+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:29:18.509+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:29:18.509+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:29:18.509+03:00 DEBUG 17824 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:31:21.134+03:00  INFO 17824 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:31:21.138+03:00  INFO 17824 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:31:21.141+03:00  INFO 17824 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:31:21.143+03:00  INFO 17824 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:31:21.144+03:00  INFO 17824 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:31:24.637+03:00  INFO 14908 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 14908 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:31:24.637+03:00 DEBUG 14908 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:31:24.637+03:00  INFO 14908 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:31:25.091+03:00  INFO 14908 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:31:25.138+03:00  INFO 14908 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
+2026-04-23T18:31:25.487+03:00  INFO 14908 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:31:25.503+03:00  INFO 14908 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:31:25.503+03:00  INFO 14908 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:31:25.551+03:00  INFO 14908 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 880 ms
+2026-04-23T18:31:25.578+03:00 DEBUG 14908 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:31:25.680+03:00  INFO 14908 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:31:25.716+03:00  INFO 14908 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:31:26.047+03:00  INFO 14908 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:31:26.063+03:00  INFO 14908 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:31:26.175+03:00  INFO 14908 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6774f264
+2026-04-23T18:31:26.175+03:00  INFO 14908 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:31:26.237+03:00  INFO 14908 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:31:27.004+03:00  INFO 14908 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:31:27.051+03:00  INFO 14908 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:31:27.108+03:00  INFO 14908 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:31:27.287+03:00  WARN 14908 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:31:27.343+03:00  WARN 14908 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 76c6e6fc-8ecb-45f0-ba50-44e071af285f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:31:27.348+03:00  INFO 14908 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:31:27.436+03:00 DEBUG 14908 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:31:27.672+03:00  INFO 14908 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:31:27.672+03:00  INFO 14908 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.37 seconds (process running for 3.871)
+2026-04-23T18:31:29.207+03:00  INFO 14908 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:31:29.207+03:00  INFO 14908 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:31:29.207+03:00  INFO 14908 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:31:29.207+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:31:29.260+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:31:29.620+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:31:29.647+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:31:29.647+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:31:30.852+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:31:30.852+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:31:30.852+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:31:30.852+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:31:30.852+03:00 DEBUG 14908 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:31:51.718+03:00  INFO 14908 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:31:51.722+03:00  INFO 14908 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:31:51.725+03:00  INFO 14908 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:31:51.727+03:00  INFO 14908 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:31:51.729+03:00  INFO 14908 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:31:53.838+03:00  INFO 15968 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 15968 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:31:53.840+03:00 DEBUG 15968 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:31:53.840+03:00  INFO 15968 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:31:54.307+03:00  INFO 15968 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:31:54.352+03:00  INFO 15968 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-04-23T18:31:54.697+03:00  INFO 15968 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:31:54.708+03:00  INFO 15968 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:31:54.708+03:00  INFO 15968 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:31:54.754+03:00  INFO 15968 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 882 ms
+2026-04-23T18:31:54.796+03:00 DEBUG 15968 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:31:54.905+03:00  INFO 15968 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:31:54.945+03:00  INFO 15968 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:31:55.278+03:00  INFO 15968 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:31:55.303+03:00  INFO 15968 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:31:55.418+03:00  INFO 15968 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6774f264
+2026-04-23T18:31:55.425+03:00  INFO 15968 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:31:55.475+03:00  INFO 15968 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:31:56.243+03:00  INFO 15968 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:31:56.287+03:00  INFO 15968 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:31:56.342+03:00  INFO 15968 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:31:56.511+03:00  WARN 15968 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:31:56.568+03:00  WARN 15968 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 12451f64-0b75-44ee-afa0-38ca774f39b6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:31:56.573+03:00  INFO 15968 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:31:56.655+03:00 DEBUG 15968 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:31:56.863+03:00  INFO 15968 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:31:56.878+03:00  INFO 15968 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.389 seconds (process running for 3.91)
+2026-04-23T18:31:58.194+03:00  INFO 15968 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:31:58.194+03:00  INFO 15968 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:31:58.194+03:00  INFO 15968 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:31:58.194+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2026-04-23T18:31:58.208+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2026-04-23T18:31:58.582+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:31:58.728+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-04-23T18:32:14.268+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:32:14.294+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:32:14.308+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:32:14.308+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:32:14.308+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:32:28.501+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:32:28.501+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:32:28.501+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:32:28.501+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:32:28.501+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:32:28.527+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:32:29.796+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:32:29.801+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:32:29.801+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:32:29.801+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:32:35.318+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:32:35.318+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:32:35.318+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:32:35.318+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:32:35.318+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:32:37.548+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:32:37.552+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:32:37.552+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:32:37.552+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:32:37.552+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:32:39.760+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:32:39.760+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:32:39.760+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:32:39.760+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:32:39.760+03:00 DEBUG 15968 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:33:59.739+03:00  INFO 15968 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:33:59.744+03:00  INFO 15968 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:33:59.747+03:00  INFO 15968 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:33:59.749+03:00  INFO 15968 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:33:59.751+03:00  INFO 15968 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:35:09.461+03:00  INFO 10028 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 10028 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:35:09.462+03:00 DEBUG 10028 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:35:09.463+03:00  INFO 10028 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:35:09.927+03:00  INFO 10028 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:35:09.966+03:00  INFO 10028 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2026-04-23T18:35:10.313+03:00  INFO 10028 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:35:10.323+03:00  INFO 10028 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:35:10.324+03:00  INFO 10028 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:35:10.369+03:00  INFO 10028 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 874 ms
+2026-04-23T18:35:10.407+03:00 DEBUG 10028 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:35:10.503+03:00  INFO 10028 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:35:10.543+03:00  INFO 10028 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:35:10.873+03:00  INFO 10028 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:35:10.895+03:00  INFO 10028 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:35:11.011+03:00  INFO 10028 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:35:11.012+03:00  INFO 10028 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:35:11.064+03:00  INFO 10028 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:35:11.816+03:00  INFO 10028 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:35:11.861+03:00  INFO 10028 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:35:11.913+03:00  INFO 10028 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:35:12.078+03:00  WARN 10028 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:35:12.136+03:00  WARN 10028 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: b9aadc39-d11c-4049-aff6-8c28bd18e64b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:35:12.141+03:00  INFO 10028 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:35:12.223+03:00 DEBUG 10028 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:35:12.451+03:00  INFO 10028 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:35:12.455+03:00  INFO 10028 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.32 seconds (process running for 3.838)
+2026-04-23T18:35:21.019+03:00  INFO 10028 --- [novashop] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:35:21.019+03:00  INFO 10028 --- [novashop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:35:21.019+03:00  INFO 10028 --- [novashop] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:35:21.019+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:35:21.072+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:35:21.432+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:35:21.459+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:35:21.459+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:35:23.126+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:35:23.126+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:35:23.126+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:35:23.137+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:35:23.137+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:35:26.369+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:35:26.373+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:35:26.373+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:35:26.373+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:35:26.373+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:35:26.400+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:35:33.664+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:35:33.664+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:35:33.664+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:35:33.664+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:35:37.642+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:35:37.642+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:35:37.642+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:35:37.642+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:35:37.642+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:35:40.949+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:35:40.949+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:35:40.949+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:35:40.949+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:35:40.960+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:35:40.962+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:36:18.485+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:36:18.485+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:36:18.485+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:36:18.485+03:00 DEBUG 10028 --- [novashop] [http-nio-8080-exec-1] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:38:01.694+03:00  INFO 10028 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:38:01.699+03:00  INFO 10028 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:38:01.702+03:00  INFO 10028 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:38:01.703+03:00  INFO 10028 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:38:01.705+03:00  INFO 10028 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:38:05.171+03:00  INFO 6432 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 6432 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:38:05.173+03:00 DEBUG 6432 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:38:05.174+03:00  INFO 6432 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:38:05.653+03:00  INFO 6432 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:38:05.685+03:00  INFO 6432 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2026-04-23T18:38:06.063+03:00  INFO 6432 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:38:06.074+03:00  INFO 6432 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:38:06.074+03:00  INFO 6432 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:38:06.114+03:00  INFO 6432 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 908 ms
+2026-04-23T18:38:06.152+03:00 DEBUG 6432 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:38:06.244+03:00  INFO 6432 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:38:06.276+03:00  INFO 6432 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:38:06.624+03:00  INFO 6432 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:38:06.647+03:00  INFO 6432 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:38:06.777+03:00  INFO 6432 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6774f264
+2026-04-23T18:38:06.778+03:00  INFO 6432 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:38:06.830+03:00  INFO 6432 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:38:07.605+03:00  INFO 6432 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:38:07.650+03:00  INFO 6432 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:38:07.710+03:00  INFO 6432 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:38:07.881+03:00  WARN 6432 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:38:07.939+03:00  WARN 6432 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: da640121-0b72-40aa-ac60-81f92a9772d4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:38:07.945+03:00  INFO 6432 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:38:08.041+03:00 DEBUG 6432 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:38:08.286+03:00  INFO 6432 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:38:08.289+03:00  INFO 6432 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.446 seconds (process running for 3.952)
+2026-04-23T18:38:09.361+03:00  INFO 6432 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:38:09.361+03:00  INFO 6432 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:38:09.361+03:00  INFO 6432 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:38:09.361+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:38:09.415+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:38:19.382+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:38:19.382+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:38:19.689+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:38:19.714+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:38:26.343+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:38:26.343+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:38:26.343+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:38:26.343+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:38:26.355+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:38:26.369+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:38:28.197+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:38:28.197+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:38:28.197+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:38:28.197+03:00 DEBUG 6432 --- [novashop] [http-nio-8080-exec-7] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:39:12.031+03:00  INFO 6432 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:39:12.034+03:00  INFO 6432 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:39:12.037+03:00  INFO 6432 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:39:12.039+03:00  INFO 6432 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:39:12.040+03:00  INFO 6432 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:39:15.389+03:00  INFO 11176 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 11176 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:39:15.390+03:00 DEBUG 11176 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:39:15.391+03:00  INFO 11176 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:39:15.850+03:00  INFO 11176 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:39:15.890+03:00  INFO 11176 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2026-04-23T18:39:16.236+03:00  INFO 11176 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:39:16.244+03:00  INFO 11176 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:39:16.245+03:00  INFO 11176 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:39:16.283+03:00  INFO 11176 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 860 ms
+2026-04-23T18:39:16.320+03:00 DEBUG 11176 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:39:16.418+03:00  INFO 11176 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:39:16.461+03:00  INFO 11176 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:39:16.794+03:00  INFO 11176 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:39:16.818+03:00  INFO 11176 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:39:16.940+03:00  INFO 11176 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:39:16.941+03:00  INFO 11176 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:39:16.991+03:00  INFO 11176 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:39:17.764+03:00  INFO 11176 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:39:17.809+03:00  INFO 11176 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:39:17.863+03:00  INFO 11176 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:39:18.037+03:00  WARN 11176 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:39:18.087+03:00  WARN 11176 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 49e70eff-edec-42cd-bfc4-75b10b1b335b
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:39:18.092+03:00  INFO 11176 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:39:18.179+03:00 DEBUG 11176 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:39:18.422+03:00  INFO 11176 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:39:18.425+03:00  INFO 11176 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.358 seconds (process running for 3.859)
+2026-04-23T18:39:21.927+03:00  INFO 11176 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:39:21.927+03:00  INFO 11176 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:39:21.927+03:00  INFO 11176 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:39:21.927+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:39:21.981+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:39:22.381+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:39:22.408+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:39:27.025+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:39:27.025+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:39:27.025+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:39:27.025+03:00 DEBUG 11176 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:40:20.966+03:00  INFO 11176 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:40:20.970+03:00  INFO 11176 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:40:20.973+03:00  INFO 11176 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:40:20.975+03:00  INFO 11176 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:40:20.977+03:00  INFO 11176 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:40:24.280+03:00  INFO 14784 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 14784 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:40:24.282+03:00 DEBUG 14784 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:40:24.282+03:00  INFO 14784 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:40:24.742+03:00  INFO 14784 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:40:24.781+03:00  INFO 14784 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interface.
+2026-04-23T18:40:25.128+03:00  INFO 14784 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:40:25.137+03:00  INFO 14784 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:40:25.137+03:00  INFO 14784 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:40:25.176+03:00  INFO 14784 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 863 ms
+2026-04-23T18:40:25.212+03:00 DEBUG 14784 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:40:25.310+03:00  INFO 14784 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:40:25.349+03:00  INFO 14784 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:40:25.665+03:00  INFO 14784 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:40:25.687+03:00  INFO 14784 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:40:25.800+03:00  INFO 14784 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:40:25.802+03:00  INFO 14784 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:40:25.856+03:00  INFO 14784 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:40:26.611+03:00  INFO 14784 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:40:26.655+03:00  INFO 14784 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:40:26.707+03:00  INFO 14784 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:40:26.866+03:00  WARN 14784 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:40:26.922+03:00  WARN 14784 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: db7c0677-4052-472c-b398-debe1148945e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:40:26.927+03:00  INFO 14784 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:40:27.010+03:00 DEBUG 14784 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:40:27.241+03:00  INFO 14784 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:40:27.244+03:00  INFO 14784 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.3 seconds (process running for 3.809)
+2026-04-23T18:40:35.461+03:00  INFO 14784 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:40:35.465+03:00  INFO 14784 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:40:35.468+03:00  INFO 14784 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:40:35.470+03:00  INFO 14784 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:40:35.473+03:00  INFO 14784 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:40:39.178+03:00  INFO 12696 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 12696 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:40:39.181+03:00 DEBUG 12696 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:40:39.182+03:00  INFO 12696 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:40:39.802+03:00  INFO 12696 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:40:39.850+03:00  INFO 12696 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2026-04-23T18:40:40.198+03:00  INFO 12696 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:40:40.198+03:00  INFO 12696 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:40:40.198+03:00  INFO 12696 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:40:40.245+03:00  INFO 12696 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 995 ms
+2026-04-23T18:40:40.291+03:00 DEBUG 12696 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:40:40.383+03:00  INFO 12696 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:40:40.430+03:00  INFO 12696 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:40:40.754+03:00  INFO 12696 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:40:40.776+03:00  INFO 12696 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:40:40.886+03:00  INFO 12696 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:40:40.886+03:00  INFO 12696 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:40:40.945+03:00  INFO 12696 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:40:41.698+03:00  INFO 12696 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:40:41.743+03:00  INFO 12696 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:40:41.807+03:00  INFO 12696 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:40:41.988+03:00  WARN 12696 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:40:42.044+03:00  WARN 12696 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 2419db97-9a82-41d9-ba5b-904aa65800be
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:40:42.050+03:00  INFO 12696 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:40:42.138+03:00 DEBUG 12696 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:40:42.377+03:00  INFO 12696 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:40:42.381+03:00  INFO 12696 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.586 seconds (process running for 4.129)
+2026-04-23T18:41:03.508+03:00  INFO 12696 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:41:03.508+03:00  INFO 12696 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:41:03.508+03:00  INFO 12696 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:41:03.508+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:03.561+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:03.960+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:03.987+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:03.987+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:04.000+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:41:05.869+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:05.874+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:05.874+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:05.880+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:05.881+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-4] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:06.815+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:06.815+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:06.815+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:06.815+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:06.815+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:10.459+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:10.459+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:10.459+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:10.459+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:10.459+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:10.470+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-5] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:41:14.209+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:14.209+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:14.209+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:14.209+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:14.209+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-6] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:17.820+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:17.820+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:17.820+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:17.820+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:17.820+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:17.820+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-9] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:41:21.196+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:41:21.196+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:41:21.196+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:41:21.196+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:41:21.196+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:41:21.196+03:00 DEBUG 12696 --- [novashop] [http-nio-8080-exec-8] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:43:24.334+03:00  INFO 12696 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:43:24.340+03:00  INFO 12696 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:43:24.343+03:00  INFO 12696 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:43:24.344+03:00  INFO 12696 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:43:24.346+03:00  INFO 12696 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-23T18:43:27.729+03:00  INFO 7540 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Starting NovashopApplication using Java 21.0.4 with PID 7540 (C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend\target\classes started by salih in C:\Users\salih\Desktop\Fullstack\Novashop\novashop-backend)
+2026-04-23T18:43:27.730+03:00 DEBUG 7540 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-23T18:43:27.731+03:00  INFO 7540 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-04-23T18:43:28.193+03:00  INFO 7540 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-23T18:43:28.235+03:00  INFO 7540 --- [novashop] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interface.
+2026-04-23T18:43:28.590+03:00  INFO 7540 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-23T18:43:28.599+03:00  INFO 7540 --- [novashop] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-23T18:43:28.600+03:00  INFO 7540 --- [novashop] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-23T18:43:28.637+03:00  INFO 7540 --- [novashop] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 873 ms
+2026-04-23T18:43:28.671+03:00 DEBUG 7540 --- [novashop] [main] c.bastug.novashop.user.config.JwtFilter  : Filter 'jwtFilter' configured for use
+2026-04-23T18:43:28.764+03:00  INFO 7540 --- [novashop] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-23T18:43:28.802+03:00  INFO 7540 --- [novashop] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-23T18:43:29.139+03:00  INFO 7540 --- [novashop] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-23T18:43:29.161+03:00  INFO 7540 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-23T18:43:29.274+03:00  INFO 7540 --- [novashop] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2299f6d7
+2026-04-23T18:43:29.276+03:00  INFO 7540 --- [novashop] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-23T18:43:29.328+03:00  INFO 7540 --- [novashop] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/novashop]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 15.4
+	Default catalog/schema: novashop/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-23T18:43:30.093+03:00  INFO 7540 --- [novashop] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-23T18:43:30.138+03:00  INFO 7540 --- [novashop] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:43:30.191+03:00  INFO 7540 --- [novashop] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-23T18:43:30.362+03:00  WARN 7540 --- [novashop] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-23T18:43:30.413+03:00  WARN 7540 --- [novashop] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 93527ac2-857f-496f-8ff3-39587a01f7e9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-23T18:43:30.418+03:00  INFO 7540 --- [novashop] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-23T18:43:30.503+03:00 DEBUG 7540 --- [novashop] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-04-23T18:43:30.734+03:00  INFO 7540 --- [novashop] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-23T18:43:30.738+03:00  INFO 7540 --- [novashop] [main] c.bastug.novashop.NovashopApplication    : Started NovashopApplication in 3.339 seconds (process running for 3.844)
+2026-04-23T18:43:33.095+03:00  INFO 7540 --- [novashop] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-23T18:43:33.095+03:00  INFO 7540 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-23T18:43:33.095+03:00  INFO 7540 --- [novashop] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-23T18:43:33.095+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:43:33.161+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:43:33.562+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:43:33.601+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:43:33.601+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-2] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:43:51.602+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing PUT /api/v1/users/me
+2026-04-23T18:43:51.609+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured PUT /api/v1/users/me
+2026-04-23T18:43:51.614+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id,u1_0.address,u1_0.created_at,u1_0.email,u1_0.enabled,u1_0.first_name,u1_0.last_name,u1_0.password,u1_0.phone,u1_0.role,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.username=?
+2026-04-23T18:43:51.616+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only
+2026-04-23T18:43:51.618+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : select u1_0.id from users u1_0 where u1_0.phone=? fetch first ? rows only
+2026-04-23T18:43:51.636+03:00 DEBUG 7540 --- [novashop] [http-nio-8080-exec-3] org.hibernate.SQL                        : update users set address=?,created_at=?,email=?,enabled=?,first_name=?,last_name=?,password=?,phone=?,role=?,updated_at=?,username=? where id=?
+2026-04-23T18:44:01.987+03:00  INFO 7540 --- [novashop] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-23T18:44:01.991+03:00  INFO 7540 --- [novashop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-23T18:44:01.994+03:00  INFO 7540 --- [novashop] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-23T18:44:01.996+03:00  INFO 7540 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-23T18:44:01.998+03:00  INFO 7540 --- [novashop] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
