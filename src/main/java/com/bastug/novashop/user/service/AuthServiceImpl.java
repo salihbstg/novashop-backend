@@ -58,7 +58,7 @@ public class AuthServiceImpl implements AuthService {
         // DTO → Entity dönüşümü
         User user = userMapper.toEntity(registerRequest);
 
-        // Şifre BCrypt ile hashlenir (güvenlik için düz text saklanmaz)
+        // Şifre BCrypt ile hashlenir
         user.setPassword(passwordEncoder.encode(registerRequest.password()));
 
         // Kullanıcı DB'ye kaydedilir
