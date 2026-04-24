@@ -2,7 +2,6 @@
 // Kullanıcı kayıt (register) ve giriş (login) işlemlerini yönetir
 package com.bastug.novashop.user.service;
 
-import com.bastug.novashop.user.config.SecurityConfig;
 import com.bastug.novashop.user.dto.authdto.*;
 import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.entity.User;
@@ -14,10 +13,11 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import jakarta.validation.*;
 
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -30,7 +30,7 @@ public class AuthServiceImpl implements AuthService {
     private final UserMapper userMapper;
 
     // Password encoder ve security config erişimi
-    private final SecurityConfig securityConfig;
+    private final PasswordEncoder passwordEncoder;
 
     // JWT token üretme ve doğrulama işlemleri
     private final JwtService jwtService;
@@ -44,22 +44,22 @@ public class AuthServiceImpl implements AuthService {
     public UserResponse register(RegisterRequest registerRequest) {
 
         // Email daha önce kullanılmış mı kontrolü
-        if(userRepository.existsByEmail(registerRequest.email()))
+        if (userRepository.existsByEmail(registerRequest.email()))
             throw new ApplicationExceptionImpl("Mail adresi zaten kayıtlı");
 
         // Username daha önce kullanılmış mı kontrolü
-        if(userRepository.existsByUsername(registerRequest.username()))
+        if (userRepository.existsByUsername(registerRequest.username()))
             throw new ApplicationExceptionImpl("Kullanıcı adı zaten kayıtlı!");
 
         // Telefon numarası daha önce kullanılmış mı kontrolü
-        if(userRepository.existsByPhone(registerRequest.phone()))
+        if (userRepository.existsByPhone(registerRequest.phone()))
             throw new ApplicationExceptionImpl("Telefon numarası zaten kayıtlı!");
 
         // DTO → Entity dönüşümü
         User user = userMapper.toEntity(registerRequest);
 
         // Şifre BCrypt ile hashlenir (güvenlik için düz text saklanmaz)
-        user.setPassword(securityConfig.passwordEncoder().encode(registerRequest.password()));
+        user.setPassword(passwordEncoder.encode(registerRequest.password()));
 
         // Kullanıcı DB'ye kaydedilir
         userRepository.save(user);
@@ -74,14 +74,19 @@ public class AuthServiceImpl implements AuthService {
 
 
         // Username ile kullanıcı bulunur
-        User user = userRepository.findByUsername(loginRequest.getUsername());
+        Optional<User> optionalUser = userRepository.findByUsername(loginRequest.getUsername());
+        if(!optionalUser.isPresent()) {
+            throw new ApplicationExceptionImpl("Kullanıcı bulunamadı");
+        }
+        User user = optionalUser.get();
+        if (!user.getEnabled()) {
+            throw new ApplicationExceptionImpl("Hesap deaktif, lütfen yetkili ile iletişime geçin!");
+        }
 
-        // Kullanıcı yoksa hata fırlatılır
-        if(user == null)
-            throw new ApplicationExceptionImpl("Hatalı kullanıcı adı!");
+
 
         // Şifre kontrolü (BCrypt matches kullanılır)
-        if(!securityConfig.passwordEncoder().matches(
+        if (!passwordEncoder.matches(
                 loginRequest.getPassword(),
                 user.getPassword()
         ))
@@ -89,7 +94,7 @@ public class AuthServiceImpl implements AuthService {
 
         // Başarılı login → JWT token ve Refresh Token üretilir
         return new AuthResponse(
-                jwtService.generateToken(user.getUsername(),user.getRole()),
+                jwtService.generateToken(user.getUsername(), user.getRole()),
                 jwtService.generateRefreshToken(user.getUsername()),
                 "Bearer",
                 expiration
@@ -100,15 +105,25 @@ public class AuthServiceImpl implements AuthService {
     //Refresh token ile yeni access token oluşturma
     @Override
     public AuthResponse refreshToken(RefreshTokenRequest refreshToken) {
-        if(refreshToken == null)
+        if (refreshToken == null)
             throw new ApplicationExceptionImpl("Token boş olamaz!");
+// Username ile kullanıcı bulunur
 
-        User user=userRepository.findByUsername(jwtService.extractUsername(refreshToken.refreshToken()));
-        if(user == null || jwtService.extractRole(refreshToken.refreshToken()) != null)
+        String username=jwtService.extractUsername(refreshToken.refreshToken());
+        Optional<User> optionalUser = userRepository.findByUsername(username);
+        if(!optionalUser.isPresent()) {
+            throw new ApplicationExceptionImpl("Kullanıcı bulunamadı");
+        }
+        User user = optionalUser.get();
+
+        if (jwtService.extractRole(refreshToken.refreshToken()) != null)
             throw new ApplicationExceptionImpl("Hatalı token!");
+        if (!user.getEnabled()) {
+            throw new ApplicationExceptionImpl("Hesap deaktif, lütfen yetkili ile iletişime geçin!");
+        }
 
         return new AuthResponse(
-                jwtService.generateToken(user.getUsername(),user.getRole()),
+                jwtService.generateToken(user.getUsername(), user.getRole()),
                 jwtService.generateRefreshToken(user.getUsername()),
                 "Bearer",
                 expiration
@@ -117,16 +132,20 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public String changePassword(ChangePasswordRequest changePasswordRequest) {
-        String username= Objects.requireNonNull(SecurityContextHolder.getContext().getAuthentication()).getName();
-        User user = userRepository.findByUsername(username);
-        if(securityConfig.passwordEncoder().matches(changePasswordRequest.oldPassword(), user.getPassword())
+        String username = Objects.requireNonNull(SecurityContextHolder.getContext().getAuthentication()).getName();
+        Optional<User> optionalUser = userRepository.findByUsername(username);
+        if(!optionalUser.isPresent()) {
+            throw new ApplicationExceptionImpl("Kullanıcı bulunamadı!");
+        }
+        User user = optionalUser.get();
+        if (passwordEncoder.matches(changePasswordRequest.oldPassword(), user.getPassword())
                 && changePasswordRequest.newPassword().equals(changePasswordRequest.confirmPassword())
-        ){
-            user.setPassword(securityConfig.passwordEncoder().encode(changePasswordRequest.newPassword()));
+        ) {
+            user.setPassword(passwordEncoder.encode(changePasswordRequest.newPassword()));
             userRepository.save(user);
             return "Şifre başarıyla değiştirildi.";
         }
-        return "Şifre değiştirme başarısız, lütfen bilgileri kontrol ediniz.";
+        throw new ApplicationExceptionImpl("Şifre değiştirme başarısız, lütfen bilgileri kontrol ediniz.");
 
     }
 }

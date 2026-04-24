@@ -15,6 +15,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -31,15 +32,13 @@ public class UserServiceImpl implements UserService {
     public UserResponse findByUsername(String username) {
 
         // DB'den kullanıcı aranır
-        User user = userRepository.findByUsername(username);
-
-        // kullanıcı yoksa custom exception fırlatılır
-        if (user == null) {
-            throw new ApplicationExceptionImpl("Kullanıcı bulunamadı!");
+        Optional<User> optionalUser = userRepository.findByUsername(username);
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            return userMapper.toUserResponse(user);
         }
+        throw new ApplicationExceptionImpl("Kullanıcı bulunamadı!");
 
-        // kullanıcı varsa response DTO'ya çevrilir
-        return userMapper.toUserResponse(user);
     }
 
     // Login olmuş (JWT ile doğrulanmış) kullanıcıyı getirir
@@ -53,10 +52,14 @@ public class UserServiceImpl implements UserService {
         ).getName();
 
         // username ile DB'den user bulunur
-        User user = userRepository.findByUsername(username);
+        Optional<User> optionalUser = userRepository.findByUsername(username);
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            // DTO'ya çevrilip response olarak döner
+            return userMapper.toUserResponse(user);
+        }
+        throw new ApplicationExceptionImpl("Kullanıcı bulunamadı!");
 
-        // DTO'ya çevrilip response olarak döner
-        return userMapper.toUserResponse(user);
     }
 
     // SecurityContext içinden login olmuş kullanıcının username'i alınır
@@ -68,28 +71,31 @@ public class UserServiceImpl implements UserService {
         String username = Objects.requireNonNull(
                 SecurityContextHolder.getContext().getAuthentication()
         ).getName();
+        Optional<User> optionalUser = userRepository.findByUsername(username);
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            // Email daha önce kullanılmış mı kontrolü
+            if (userRepository.existsByEmail(request.email())
+                    && !user.getEmail().equals(request.email()))
+                throw new ApplicationExceptionImpl("Mail adresi zaten kayıtlı");
 
-        User user = userRepository.findByUsername(username);
 
-        // Email daha önce kullanılmış mı kontrolü
-        if (userRepository.existsByEmail(request.email())
-                && !user.getEmail().equals(request.email()))
-            throw new ApplicationExceptionImpl("Mail adresi zaten kayıtlı");
+            // Telefon numarası daha önce kullanılmış mı kontrolü
+            if (userRepository.existsByPhone(request.phone())
+                    && !user.getPhone().equals(request.phone()))
+                throw new ApplicationExceptionImpl("Telefon numarası zaten kayıtlı!");
 
+            user.setEmail(request.email());
+            user.setAddress(request.address());
+            user.setFirstName(request.firstName());
+            user.setLastName(request.lastName());
+            user.setPhone(request.phone());
 
-        // Telefon numarası daha önce kullanılmış mı kontrolü
-        if (userRepository.existsByPhone(request.phone())
-                && !user.getPhone().equals(request.phone()))
-            throw new ApplicationExceptionImpl("Telefon numarası zaten kayıtlı!");
+            userRepository.save(user);
+            return userMapper.toUserResponse(user);
+        }
+        throw new ApplicationExceptionImpl("Kullanıcı bulunamadı!");
 
-        user.setEmail(request.email());
-        user.setAddress(request.address());
-        user.setFirstName(request.firstName());
-        user.setLastName(request.lastName());
-        user.setPhone(request.phone());
-
-        userRepository.save(user);
-        return userMapper.toUserResponse(user);
     }
 }
 

@@ -1,6 +1,7 @@
 package com.bastug.novashop.user.config;
 
 import com.bastug.novashop.user.service.JwtService;
+import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -50,32 +51,41 @@ public class JwtFilter extends OncePerRequestFilter {
             filterChain.doFilter(request, response);
             return;
         }
+        try {
+            // Bearer kısmını atıp sadece JWT token'ı alıyoruz
+            String token = authHeader.substring(7);
 
-        // Bearer kısmını atıp sadece JWT token'ı alıyoruz
-        String token = authHeader.substring(7);
+            // Token içinden username (subject) bilgisi çekilir
+            String username = jwtService.extractUsername(token);
 
-        // Token içinden username (subject) bilgisi çekilir
-        String username = jwtService.extractUsername(token);
+            // Token içinden role bilgisi çekilir (USER, ADMIN vs.)
+            String role = jwtService.extractRole(token);
 
-        // Token içinden role bilgisi çekilir (USER, ADMIN vs.)
-        String role = jwtService.extractRole(token);
+            // Spring Security için Authentication objesi oluşturuluyor
+            // 1. username
+            // 2. password (JWT'de gerek yok o yüzden null)
+            // 3. authority (role bilgisi)
+            UsernamePasswordAuthenticationToken authenticationToken =
+                    new UsernamePasswordAuthenticationToken(
+                            username,
+                            null,
+                            List.of(new SimpleGrantedAuthority(role))
+                    );
 
-        // Spring Security için Authentication objesi oluşturuluyor
-        // 1. username
-        // 2. password (JWT'de gerek yok o yüzden null)
-        // 3. authority (role bilgisi)
-        UsernamePasswordAuthenticationToken authenticationToken =
-                new UsernamePasswordAuthenticationToken(
-                        username,
-                        null,
-                        List.of(new SimpleGrantedAuthority(role))
-                );
+            // Oluşturulan authentication Spring Security context'e set edilir
+            // Böylece artık kullanıcı "login olmuş" olarak kabul edilir
+            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 
-        // Oluşturulan authentication Spring Security context'e set edilir
-        // Böylece artık kullanıcı "login olmuş" olarak kabul edilir
-        SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            // Filter chain devam ettirilir (request controller'a gider)
+            filterChain.doFilter(request, response);
+        } catch (JwtException | IllegalArgumentException e) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.setContentType("application/json");
+            response.getWriter().write("""
+                        {"message":"Geçersiz veya süresi dolmuş token","status":401}
+                    """);
+        }
 
-        // Filter chain devam ettirilir (request controller'a gider)
-        filterChain.doFilter(request, response);
+
     }
 }
