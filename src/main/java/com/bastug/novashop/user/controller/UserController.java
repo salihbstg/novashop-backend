@@ -1,7 +1,7 @@
 package com.bastug.novashop.user.controller;
 
-import com.bastug.novashop.user.dto.UpdateUserRequest;
-import com.bastug.novashop.user.dto.UserResponse;
+import com.bastug.novashop.user.dto.userdto.UpdateUserRequest;
+import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.service.interfaces.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

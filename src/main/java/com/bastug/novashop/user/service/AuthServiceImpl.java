@@ -3,20 +3,21 @@
 package com.bastug.novashop.user.service;
 
 import com.bastug.novashop.user.config.SecurityConfig;
-import com.bastug.novashop.user.dto.LoginRequest;
-import com.bastug.novashop.user.dto.RegisterRequest;
-import com.bastug.novashop.user.dto.UserResponse;
+import com.bastug.novashop.user.dto.authdto.*;
+import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.entity.User;
-import com.bastug.novashop.user.enums.Role;
-import com.bastug.novashop.user.exception.ApplicationExceptionHandler;
 import com.bastug.novashop.user.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.user.mapper.UserMapper;
 import com.bastug.novashop.user.repository.UserRepository;
 import com.bastug.novashop.user.service.interfaces.AuthService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.ApplicationContextException;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import jakarta.validation.*;
+
+import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
@@ -33,6 +34,9 @@ public class AuthServiceImpl implements AuthService {
 
     // JWT token üretme ve doğrulama işlemleri
     private final JwtService jwtService;
+
+    @Value("${jwt.expiration}")
+    private int expiration;
 
     // Üyelik oluşturma (kullanıcı kayıt işlemi)
     @Transactional
@@ -66,7 +70,8 @@ public class AuthServiceImpl implements AuthService {
 
     // Kullanıcı login işlemi
     @Override
-    public String login(LoginRequest loginRequest) {
+    public AuthResponse login(LoginRequest loginRequest) {
+
 
         // Username ile kullanıcı bulunur
         User user = userRepository.findByUsername(loginRequest.getUsername());
@@ -82,7 +87,46 @@ public class AuthServiceImpl implements AuthService {
         ))
             throw new ApplicationExceptionImpl("Hatalı şifre!");
 
-        // Başarılı login → JWT token üretilir
-        return jwtService.generateToken(user.getUsername(), user.getRole());
+        // Başarılı login → JWT token ve Refresh Token üretilir
+        return new AuthResponse(
+                jwtService.generateToken(user.getUsername(),user.getRole()),
+                jwtService.generateRefreshToken(user.getUsername()),
+                "Bearer",
+                expiration
+
+        );
+    }
+
+    //Refresh token ile yeni access token oluşturma
+    @Override
+    public AuthResponse refreshToken(RefreshTokenRequest refreshToken) {
+        if(refreshToken == null)
+            throw new ApplicationExceptionImpl("Token boş olamaz!");
+
+        User user=userRepository.findByUsername(jwtService.extractUsername(refreshToken.refreshToken()));
+        if(user == null || jwtService.extractRole(refreshToken.refreshToken()) != null)
+            throw new ApplicationExceptionImpl("Hatalı token!");
+
+        return new AuthResponse(
+                jwtService.generateToken(user.getUsername(),user.getRole()),
+                jwtService.generateRefreshToken(user.getUsername()),
+                "Bearer",
+                expiration
+        );
+    }
+
+    @Override
+    public String changePassword(ChangePasswordRequest changePasswordRequest) {
+        String username= Objects.requireNonNull(SecurityContextHolder.getContext().getAuthentication()).getName();
+        User user = userRepository.findByUsername(username);
+        if(securityConfig.passwordEncoder().matches(changePasswordRequest.oldPassword(), user.getPassword())
+                && changePasswordRequest.newPassword().equals(changePasswordRequest.confirmPassword())
+        ){
+            user.setPassword(securityConfig.passwordEncoder().encode(changePasswordRequest.newPassword()));
+            userRepository.save(user);
+            return "Şifre başarıyla değiştirildi.";
+        }
+        return "Şifre değiştirme başarısız, lütfen bilgileri kontrol ediniz.";
+
     }
 }

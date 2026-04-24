@@ -1,7 +1,7 @@
 package com.bastug.novashop.user.mapper;
 
-import com.bastug.novashop.user.dto.RegisterRequest;
-import com.bastug.novashop.user.dto.UserResponse;
+import com.bastug.novashop.user.dto.authdto.RegisterRequest;
+import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.entity.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

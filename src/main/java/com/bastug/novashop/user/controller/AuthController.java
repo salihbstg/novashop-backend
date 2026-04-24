@@ -1,10 +1,8 @@
 package com.bastug.novashop.user.controller;
 
-import com.bastug.novashop.user.dto.LoginRequest;
-import com.bastug.novashop.user.dto.RegisterRequest;
-import com.bastug.novashop.user.dto.UserResponse;
+import com.bastug.novashop.user.dto.authdto.*;
+import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.service.interfaces.AuthService;
-import jakarta.validation.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -34,12 +33,23 @@ public class AuthController {
 
     // Kullanıcı login endpointi
     @PostMapping("/login")
-    ResponseEntity<String> login(@RequestBody LoginRequest loginRequest) {
+    ResponseEntity<AuthResponse> login(@RequestBody LoginRequest loginRequest) {
 
         // login bilgileri service'e gönderilir
         // başarılıysa JWT token döner
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(authService.login(loginRequest));
+    }
+
+    //Refresh token ile yeni bir access token oluşturma
+    @PostMapping("/refresh-token")
+    ResponseEntity<AuthResponse> refreshToken(@RequestBody RefreshTokenRequest refreshToken) {
+        return ResponseEntity.ok(authService.refreshToken(refreshToken));
+    }
+
+    @PostMapping("/change-password")
+    ResponseEntity<String> changePassword(@RequestBody ChangePasswordRequest changePasswordRequest) {
+        return ResponseEntity.ok(authService.changePassword(changePasswordRequest));
     }
 }

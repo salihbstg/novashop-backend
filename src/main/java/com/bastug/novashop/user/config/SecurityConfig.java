@@ -19,14 +19,20 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http, JwtFilter jwtFilter) throws Exception {
 
         http
-                // CSRF korumasını kapatıyoruz (REST API olduğu için gerek yok)
+                // CSRF korumasını, basichttp ve form logini kapatıyoruz
                 .csrf(AbstractHttpConfigurer::disable)
-
+                .formLogin(AbstractHttpConfigurer::disable)
+                .httpBasic(AbstractHttpConfigurer::disable)
                 // Endpoint bazlı yetkilendirme kuralları
                 .authorizeHttpRequests(auth -> auth
 
                         // Auth endpointleri herkes erişebilir (login/register)
-                        .requestMatchers("/api/v1/auth/**").permitAll()
+                        .requestMatchers("/api/v1/auth/login").permitAll()
+                        .requestMatchers("/api/v1/auth/register").permitAll()
+                        .requestMatchers("/api/v1/auth/refresh-token").permitAll()
+
+                        //Şifre değişikliği yalnızca oturum açıldığında yapılabilir (ADMIN ve USER)
+                        .requestMatchers("/api/v1/auth/change-password").hasAnyRole("ADMIN", "USER")
 
                         // Admin endpointleri sadece ADMIN rolüne sahip kullanıcılar erişebilir
                         .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")

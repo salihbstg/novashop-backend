@@ -2,7 +2,6 @@
 // Kullanıcı login olduktan sonra token oluşturur ve gelen token'ı parse eder
 package com.bastug.novashop.user.service;
 
-import com.bastug.novashop.user.entity.User;
 import com.bastug.novashop.user.enums.Role;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -52,6 +51,26 @@ public class JwtService {
                 .compact();
     }
 
+    //Refresh token üretimi
+    public String generateRefreshToken(String username) {
+        return Jwts.builder()
+
+                // Token içine username koyulur (subject = kimlik)
+                .setSubject(username)
+
+                // Token oluşturulma zamanı
+                .setIssuedAt(new Date())
+
+                // Token bitiş zamanı (expire süresi eklenir)
+                .setExpiration(new Date(System.currentTimeMillis() + expiration*10L))
+
+                // Token imzalanır (HS256 + secret key)
+                .signWith(getKey(), SignatureAlgorithm.HS256)
+
+                // String token olarak döner
+                .compact();
+    }
+
     // Token içinden username (subject) bilgisi çekilir
     public String extractUsername(String token) {
         return Jwts.parserBuilder()
@@ -72,4 +91,5 @@ public class JwtService {
                 // role claim'i String olarak alınır
                 .get("role", String.class);
     }
+
 }

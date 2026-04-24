@@ -1,4 +1,4 @@
-package com.bastug.novashop.user.dto;
+package com.bastug.novashop.user.dto.userdto;
 
 public record UserResponse(
         Long id,

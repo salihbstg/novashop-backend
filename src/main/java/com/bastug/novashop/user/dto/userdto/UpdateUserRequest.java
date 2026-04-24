@@ -1,4 +1,5 @@
-package com.bastug.novashop.user.dto;
+package com.bastug.novashop.user.dto.userdto;
+
 import jakarta.validation.constraints.*;
 
 public record UpdateUserRequest(

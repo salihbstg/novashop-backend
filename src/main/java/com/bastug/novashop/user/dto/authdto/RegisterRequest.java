@@ -1,5 +1,6 @@
-package com.bastug.novashop.user.dto;
+package com.bastug.novashop.user.dto.authdto;
 import jakarta.validation.constraints.*;
+
 public record RegisterRequest(
 
         @NotNull(message="Kullanıcı adı boş olamaz")

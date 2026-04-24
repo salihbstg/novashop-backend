@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -38,7 +37,7 @@ public class JwtFilter extends OncePerRequestFilter {
 
         // Auth endpointlerine gelen istekleri filtrelemeden geçiriyoruz
         // (login/register gibi endpointlerde JWT gerekmez)
-        if (path.startsWith("/api/v1/auth/")) {
+        if (path.startsWith("/api/v1/auth/") && !path.startsWith("/api/v1/auth/change-password")) {
             filterChain.doFilter(request, response);
             return;
         }

@@ -1,7 +1,7 @@
 package com.bastug.novashop.user.service.interfaces;
 
-import com.bastug.novashop.user.dto.UpdateUserRequest;
-import com.bastug.novashop.user.dto.UserResponse;
+import com.bastug.novashop.user.dto.userdto.UpdateUserRequest;
+import com.bastug.novashop.user.dto.userdto.UserResponse;
 import org.jspecify.annotations.Nullable;
 
 public interface UserService {

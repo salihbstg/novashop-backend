@@ -1,11 +1,15 @@
 package com.bastug.novashop.user.service.interfaces;
 
-import com.bastug.novashop.user.dto.LoginRequest;
-import com.bastug.novashop.user.dto.RegisterRequest;
-import com.bastug.novashop.user.dto.UserResponse;
+import com.bastug.novashop.user.dto.authdto.*;
+import com.bastug.novashop.user.dto.userdto.UserResponse;
+import org.jspecify.annotations.Nullable;
 
 public interface AuthService {
-    public UserResponse register(RegisterRequest registerRequest);
-    public String login(LoginRequest loginRequest);
+    UserResponse register(RegisterRequest registerRequest);
 
+    AuthResponse login(LoginRequest loginRequest);
+
+    AuthResponse refreshToken(RefreshTokenRequest refreshToken);
+
+    String changePassword(ChangePasswordRequest changePasswordRequest);
 }
