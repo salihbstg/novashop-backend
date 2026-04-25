@@ -5,7 +5,7 @@ package com.bastug.novashop.user.service;
 import com.bastug.novashop.user.dto.userdto.UpdateUserRequest;
 import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.entity.User;
-import com.bastug.novashop.user.exception.ApplicationExceptionImpl;
+import com.bastug.novashop.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.user.mapper.UserMapper;
 import com.bastug.novashop.user.repository.UserRepository;
 import com.bastug.novashop.user.service.interfaces.UserService;

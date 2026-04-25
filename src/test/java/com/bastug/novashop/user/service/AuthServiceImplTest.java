@@ -6,7 +6,7 @@ import com.bastug.novashop.user.dto.authdto.RegisterRequest;
 import com.bastug.novashop.user.dto.userdto.UserResponse;
 import com.bastug.novashop.user.entity.User;
 import com.bastug.novashop.user.enums.Role;
-import com.bastug.novashop.user.exception.ApplicationExceptionImpl;
+import com.bastug.novashop.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.user.mapper.UserMapper;
 import com.bastug.novashop.user.repository.UserRepository;
 import org.junit.jupiter.api.Test;

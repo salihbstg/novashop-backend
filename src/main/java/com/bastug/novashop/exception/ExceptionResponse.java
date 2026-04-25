@@ -1,4 +1,4 @@
-package com.bastug.novashop.user.exception;
+package com.bastug.novashop.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

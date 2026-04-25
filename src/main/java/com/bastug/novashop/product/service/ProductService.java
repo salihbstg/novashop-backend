@@ -1,5 +1,6 @@
 package com.bastug.novashop.product.service;
 
+import com.bastug.novashop.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.product.dto.ProductResponse;
 import com.bastug.novashop.product.dto.ProductSaveRequest;
 import com.bastug.novashop.product.dto.ProductUpdateRequest;
@@ -32,7 +33,7 @@ public class ProductService {
             Product product=productMapper.updateProductFromRequest(productUpdateRequest,optionalProduct.get());
             return productMapper.toProductResponse(productRepository.save(product));
         }
-        return null;
+        throw  new ApplicationExceptionImpl("Ürün bulunamadı");
     }
 
     //Tüm ürünleri listele
@@ -48,11 +49,15 @@ public class ProductService {
     //id ile ürün listele
     public ProductResponse getProductById(Long id) {
         Optional<Product> optionalProduct=productRepository.findById(id);
-        return optionalProduct.map(productMapper::toProductResponse).orElse(null);
+        return optionalProduct.map(productMapper::toProductResponse).orElseThrow(()-> new ApplicationExceptionImpl("Product not found"));
     }
 
     //id ile ürün silme
     public String deleteProduct(Long id) {
+        Optional<Product> optionalProduct=productRepository.findById(id);
+        if (optionalProduct.isPresent()) {
+            throw new ApplicationExceptionImpl("Ürün bulunamadı!");
+        }
         productRepository.deleteById(id);
         return "ID'li ürün silindi!";
     }

@@ -1,4 +1,4 @@
-package com.bastug.novashop.user.exception;
+package com.bastug.novashop.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
