@@ -1,14 +1,15 @@
 package com.bastug.novashop.product.dto;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public record ProductResponse(
         Long id,
         String productName,
         String productDescription,
-        String productPrice,
+        BigDecimal productPrice,
         String imageUrl,
-        String stock,
+        int stock,
         LocalDateTime createdAt,
         LocalDateTime updatedAt
 ) {

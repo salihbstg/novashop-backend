@@ -1,6 +1,6 @@
 // Auth (kimlik doğrulama) işlemlerini yapan service sınıfı
 // Kullanıcı kayıt (register) ve giriş (login) işlemlerini yönetir
-package com.bastug.novashop.user.service;
+package com.bastug.novashop.user;
 
 import com.bastug.novashop.user.dto.authdto.*;
 import com.bastug.novashop.user.dto.userdto.UserResponse;
@@ -8,7 +8,7 @@ import com.bastug.novashop.user.entity.User;
 import com.bastug.novashop.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.user.mapper.UserMapper;
 import com.bastug.novashop.user.repository.UserRepository;
-import com.bastug.novashop.user.service.interfaces.AuthService;
+import com.bastug.novashop.user.interfaces.AuthService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

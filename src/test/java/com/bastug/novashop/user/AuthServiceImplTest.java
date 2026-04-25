@@ -1,4 +1,4 @@
-package com.bastug.novashop.user.service;
+package com.bastug.novashop.user;
 
 import com.bastug.novashop.user.dto.authdto.AuthResponse;
 import com.bastug.novashop.user.dto.authdto.LoginRequest;
@@ -65,10 +65,13 @@ public class AuthServiceImplTest {
         );
 
         UserResponse mockResponse = new UserResponse(
+                32L,
                 "username",
                 "email@gmail.com",
                 "test",
                 "test",
+                "+905555555555",
+                "address",
                 "USER"
         );
 

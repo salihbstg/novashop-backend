@@ -1,4 +1,4 @@
-package com.bastug.novashop.user.service.interfaces;
+package com.bastug.novashop.user.interfaces;
 
 import com.bastug.novashop.user.dto.authdto.*;
 import com.bastug.novashop.user.dto.userdto.UserResponse;

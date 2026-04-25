@@ -1,6 +1,6 @@
 // JWT (JSON Web Token) üretme ve çözme işlemlerini yapan service sınıfı
 // Kullanıcı login olduktan sonra token oluşturur ve gelen token'ı parse eder
-package com.bastug.novashop.user.service;
+package com.bastug.novashop.user;
 
 import com.bastug.novashop.user.enums.Role;
 import io.jsonwebtoken.Jwts;

@@ -2,7 +2,6 @@ package com.bastug.novashop.product.mapper;
 
 import com.bastug.novashop.product.dto.ProductResponse;
 import com.bastug.novashop.product.dto.ProductSaveRequest;
-import com.bastug.novashop.product.dto.ProductUpdateRequest;
 import com.bastug.novashop.product.entity.Product;
 import org.mapstruct.*;
 
@@ -18,5 +17,5 @@ public interface ProductMapper {
 
     @Mapping(target = "id", ignore = true)
     @BeanMapping(nullValuePropertyMappingStrategy=NullValuePropertyMappingStrategy.IGNORE)
-    Product updateProductFromRequest(ProductUpdateRequest productUpdateRequest, @MappingTarget Product product);
+    Product updateProductFromRequest(ProductSaveRequest productUpdateRequest, @MappingTarget Product product);
 }

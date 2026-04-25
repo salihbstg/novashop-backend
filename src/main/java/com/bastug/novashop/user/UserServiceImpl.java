@@ -1,6 +1,6 @@
 // Kullanıcı ile ilgili business işlemleri yapan service sınıfı
 // User verisini DB'den çekme ve DTO'ya çevirme işlemlerini yapar
-package com.bastug.novashop.user.service;
+package com.bastug.novashop.user;
 
 import com.bastug.novashop.user.dto.userdto.UpdateUserRequest;
 import com.bastug.novashop.user.dto.userdto.UserResponse;
@@ -8,7 +8,7 @@ import com.bastug.novashop.user.entity.User;
 import com.bastug.novashop.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.user.mapper.UserMapper;
 import com.bastug.novashop.user.repository.UserRepository;
-import com.bastug.novashop.user.service.interfaces.UserService;
+import com.bastug.novashop.user.interfaces.UserService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -3,15 +3,14 @@ package com.bastug.novashop.product.service;
 import com.bastug.novashop.exception.ApplicationExceptionImpl;
 import com.bastug.novashop.product.dto.ProductResponse;
 import com.bastug.novashop.product.dto.ProductSaveRequest;
-import com.bastug.novashop.product.dto.ProductUpdateRequest;
 import com.bastug.novashop.product.mapper.ProductMapper;
 import com.bastug.novashop.product.entity.Product;
 import com.bastug.novashop.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -27,39 +26,34 @@ public class ProductService {
     }
 
     //Ürün güncelleme
-    public ProductResponse updateProduct(ProductUpdateRequest productUpdateRequest) {
-        Optional<Product> optionalProduct=productRepository.findById(productUpdateRequest.id());
+    public ProductResponse updateProduct(ProductSaveRequest productSaveRequest, Long id) {
+        Optional<Product> optionalProduct = productRepository.findById(id);
         if (optionalProduct.isPresent()) {
-            Product product=productMapper.updateProductFromRequest(productUpdateRequest,optionalProduct.get());
+            Product product = productMapper.updateProductFromRequest(productSaveRequest, optionalProduct.get());
             return productMapper.toProductResponse(productRepository.save(product));
         }
-        throw  new ApplicationExceptionImpl("Ürün bulunamadı");
+        throw new ApplicationExceptionImpl("Ürün bulunamadı");
     }
 
     //Tüm ürünleri listele
-    public List<ProductResponse> getAllProducts() {
-        List<Product> products=productRepository.findAll();
-        List<ProductResponse> productResponses=new ArrayList<>();
-        for (Product product:products) {
-            productResponses.add(productMapper.toProductResponse(product));
-        }
-        return productResponses;
+    public Page<ProductResponse> getAllProducts(Pageable pageable) {
+        return productRepository.findAll(pageable)
+                .map(productMapper::toProductResponse);
     }
 
     //id ile ürün listele
     public ProductResponse getProductById(Long id) {
-        Optional<Product> optionalProduct=productRepository.findById(id);
-        return optionalProduct.map(productMapper::toProductResponse).orElseThrow(()-> new ApplicationExceptionImpl("Product not found"));
+        Optional<Product> optionalProduct = productRepository.findById(id);
+        return optionalProduct.map(productMapper::toProductResponse).orElseThrow(() -> new ApplicationExceptionImpl("Product not found"));
     }
 
     //id ile ürün silme
-    public String deleteProduct(Long id) {
-        Optional<Product> optionalProduct=productRepository.findById(id);
+    public void deleteProduct(Long id) {
+        Optional<Product> optionalProduct = productRepository.findById(id);
         if (optionalProduct.isPresent()) {
             throw new ApplicationExceptionImpl("Ürün bulunamadı!");
         }
         productRepository.deleteById(id);
-        return "ID'li ürün silindi!";
     }
 
 }
