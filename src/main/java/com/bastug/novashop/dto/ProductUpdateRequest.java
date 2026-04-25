@@ -1,19 +1,22 @@
 package com.bastug.novashop.dto;
 
+
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
 import java.math.BigDecimal;
 
-
-public record ProductSaveRequest(
-        @NotNull(message = "Ürün adı boş olamaz") @NotEmpty(message = "Ürün adı boş olamaz")
+public record ProductUpdateRequest (
+        @NotNull(message = "Güncelleme için id vermelisiniz")
+        Long id,
         String productName,
-        @NotNull(message = "Açıklama boş olamaz") @NotEmpty(message = "Açıklama boş olamaz")
         String productDescription,
+        @Positive(message = "Fiyat pozitif olmalıdır!")
+        @NotNull(message = "Fiyat boş olamaz")
         BigDecimal productPrice,
         String imageUrl,
         Integer stock
+){
 
-) {
 }

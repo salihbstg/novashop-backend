@@ -9,8 +9,8 @@ public record ProductResponse(
         String productPrice,
         String imageUrl,
         String stock,
-        LocalDateTime createAt,
-        LocalDateTime updateAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
 ) {
 
 }
