@@ -1,9 +1,9 @@
-package com.bastug.novashop.mapper;
+package com.bastug.novashop.product.mapper;
 
-import com.bastug.novashop.dto.ProductResponse;
-import com.bastug.novashop.dto.ProductSaveRequest;
-import com.bastug.novashop.dto.ProductUpdateRequest;
-import com.bastug.novashop.product.Product;
+import com.bastug.novashop.product.dto.ProductResponse;
+import com.bastug.novashop.product.dto.ProductSaveRequest;
+import com.bastug.novashop.product.dto.ProductUpdateRequest;
+import com.bastug.novashop.product.entity.Product;
 import org.mapstruct.*;
 
 @Mapper(componentModel = "spring")

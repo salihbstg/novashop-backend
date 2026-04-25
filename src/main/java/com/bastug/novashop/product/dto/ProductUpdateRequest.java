@@ -1,7 +1,6 @@
-package com.bastug.novashop.dto;
+package com.bastug.novashop.product.dto;
 
 
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 

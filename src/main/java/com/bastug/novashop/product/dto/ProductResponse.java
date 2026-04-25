@@ -1,4 +1,4 @@
-package com.bastug.novashop.dto;
+package com.bastug.novashop.product.dto;
 
 import java.time.LocalDateTime;
 

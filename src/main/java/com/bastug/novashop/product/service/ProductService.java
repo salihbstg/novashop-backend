@@ -1,11 +1,11 @@
-package com.bastug.novashop.service;
+package com.bastug.novashop.product.service;
 
-import com.bastug.novashop.dto.ProductResponse;
-import com.bastug.novashop.dto.ProductSaveRequest;
-import com.bastug.novashop.dto.ProductUpdateRequest;
-import com.bastug.novashop.mapper.ProductMapper;
-import com.bastug.novashop.product.Product;
-import com.bastug.novashop.repository.ProductRepository;
+import com.bastug.novashop.product.dto.ProductResponse;
+import com.bastug.novashop.product.dto.ProductSaveRequest;
+import com.bastug.novashop.product.dto.ProductUpdateRequest;
+import com.bastug.novashop.product.mapper.ProductMapper;
+import com.bastug.novashop.product.entity.Product;
+import com.bastug.novashop.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

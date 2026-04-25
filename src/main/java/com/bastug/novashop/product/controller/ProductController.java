@@ -1,9 +1,9 @@
-package com.bastug.novashop.controller;
+package com.bastug.novashop.product.controller;
 
-import com.bastug.novashop.dto.ProductResponse;
-import com.bastug.novashop.dto.ProductSaveRequest;
-import com.bastug.novashop.dto.ProductUpdateRequest;
-import com.bastug.novashop.service.ProductService;
+import com.bastug.novashop.product.dto.ProductResponse;
+import com.bastug.novashop.product.dto.ProductSaveRequest;
+import com.bastug.novashop.product.dto.ProductUpdateRequest;
+import com.bastug.novashop.product.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

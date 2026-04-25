@@ -1,4 +1,4 @@
-package com.bastug.novashop.product;
+package com.bastug.novashop.product.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
