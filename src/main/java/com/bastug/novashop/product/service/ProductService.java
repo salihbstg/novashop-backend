@@ -27,12 +27,10 @@ public class ProductService {
 
     //Ürün güncelleme
     public ProductResponse updateProduct(ProductSaveRequest productSaveRequest, Long id) {
-        Optional<Product> optionalProduct = productRepository.findById(id);
-        if (optionalProduct.isPresent()) {
-            Product product = productMapper.updateProductFromRequest(productSaveRequest, optionalProduct.get());
-            return productMapper.toProductResponse(productRepository.save(product));
-        }
-        throw new ApplicationExceptionImpl("Ürün bulunamadı");
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new ApplicationExceptionImpl("Ürün bulunamadı"));
+        productMapper.updateProductFromRequest(productSaveRequest, product);
+        return productMapper.toProductResponse(productRepository.save(product));
     }
 
     //Tüm ürünleri listele
