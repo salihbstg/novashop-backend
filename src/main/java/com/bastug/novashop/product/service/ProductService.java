@@ -48,7 +48,7 @@ public class ProductService {
     //id ile ürün silme
     public void deleteProduct(Long id) {
         Optional<Product> optionalProduct = productRepository.findById(id);
-        if (optionalProduct.isPresent()) {
+        if (optionalProduct.isEmpty()) {
             throw new ApplicationExceptionImpl("Ürün bulunamadı!");
         }
         productRepository.deleteById(id);

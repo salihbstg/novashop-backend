@@ -18,6 +18,7 @@ import java.time.LocalDateTime;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -89,5 +90,19 @@ public class ProductServiceTest {
         assertThat(productResponse.imageUrl()).isEqualTo("updated url");
         assertThat(productResponse.productPrice()).isEqualTo(new BigDecimal(1000));
 
+    }
+    @Test
+    void deleteProduct_shouldDeleteProduct_whenProductExists(){
+        Product product = new Product();
+        product.setProductName("old name");
+        product.setProductDescription("old description");
+        product.setCreatedAt(LocalDateTime.now());
+        product.setUpdatedAt(LocalDateTime.now());
+        product.setProductPrice(BigDecimal.valueOf(1000));
+        product.setImageUrl("old url");
+        product.setId(1L);
+        when(productRepository.findById(1L)).thenReturn(Optional.of(product));
+        productService.deleteProduct(1L);
+        verify(productRepository).deleteById(1L);
     }
 }
